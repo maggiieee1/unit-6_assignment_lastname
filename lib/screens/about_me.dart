@@ -20,7 +20,7 @@ class _About_MeState extends State<About_Me> {
           bottom: const TabBar(
             tabs: [
               Tab(icon: Icon(Icons.person), text: "Profile"),
-              Tab(icon: Icon(Icons.pages), text: "Hobbies"),
+              Tab(icon: Icon(Icons.favorite), text: "Hobbies"),
             ],
           ),
         ),
