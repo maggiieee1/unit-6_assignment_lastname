@@ -7,21 +7,28 @@ class HomScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Gesture and Navigation"),
+        title: const Text("Home"),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text("This is supposed to be a Home Screen"),
-          const SizedBox(height: 20),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/about_me');
-            },
-            child: const Text("Go to About Me"),
-          ),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              "Know more About Me",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.purple),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/about_me');
+              },
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.purple,
+              ),
+              child: const Text("About Me"),
+            ),
+          ],
+        ),
       ),
     );
   }
